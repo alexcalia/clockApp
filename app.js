@@ -5,6 +5,15 @@ clockApp.quote = document.getElementById('quote');
 clockApp.author = document.getElementById('author');
 clockApp.location = document.getElementById('location');
 clockApp.timezone= document.getElementById('timezone');
+clockApp.time = document.getElementById('time');
+
+// Time method
+clockApp.currentTime = () => {
+  const date = new Date();
+  const hour = date.getHours();
+  const min = date.getMinutes();
+  const sec = date.getSeconds()
+}
 
 // Method to get random quote
 clockApp.getQuote = async () => {
