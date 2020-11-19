@@ -1,20 +1,29 @@
 const clockApp = {}
 
 // Caching
-clockApp.quoteDOM = document.getElementById('quote');
-clockApp.authorDOM = document.getElementById('author');
+clockApp.quote = document.getElementById('quote');
+clockApp.author = document.getElementById('author');
+clockApp.location = document.getElementById('location');
+clockApp.timezone= document.getElementById('timezone');
 
-// Vartiables
-clockApp.quote = "";
-clockApp.author = "";
-
+// Method to get random quote
 clockApp.getQuote = async () => {
   await fetch(`http://quotes.stormconsultancy.co.uk/random.json`)
         .then(response => response.json())
         .then(data => {
-          clockApp.quoteDOM.innerHTML = data.quote;
-          clockApp.authorDOM.innerHTML = `- ${data.author}`
+          clockApp.quote.innerHTML = data.quote;
+          clockApp.author.innerHTML = `- ${data.author}`
         });
+};
+
+//Method to get geolocation data based on IP
+clockApp.getGeoData = async () => {
+  await fetch(`http://ip-api.com/json/`)
+        .then(response => response.json())
+        .then(data => {
+          clockApp.location.innerHTML = `${data.city}, ${data.country}`;
+          clockApp.timezone.innerHTML = data.timezone;
+        })
 };
 
 clockApp.eventListeners = () => {
@@ -24,6 +33,7 @@ clockApp.eventListeners = () => {
 clockApp.init = () => {
   clockApp.eventListeners();
   clockApp.getQuote();
+  clockApp.getGeoData();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
