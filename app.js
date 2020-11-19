@@ -13,6 +13,8 @@ clockApp.currentTime = () => {
   const hour = date.getHours();
   const min = date.getMinutes();
   const sec = date.getSeconds()
+  var tzName = date.toLocaleString('en', {timeZoneName:'short'}).split(' ').pop();
+  console.log(tzName);
 }
 
 // Method to get random quote
@@ -32,6 +34,7 @@ clockApp.getGeoData = async () => {
         .then(data => {
           clockApp.location.innerHTML = `${data.city}, ${data.country}`;
           clockApp.timezone.innerHTML = data.timezone;
+          console.log(data);
         })
 };
 
@@ -43,6 +46,7 @@ clockApp.init = () => {
   clockApp.eventListeners();
   clockApp.getQuote();
   clockApp.getGeoData();
+  clockApp.currentTime();
 };
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
   <title>Clock App</title>
 </head>
@@ -22,7 +24,8 @@
       <p class="timezone" id="timezone"></p>
     </section>
     <section class="clockSection">
-      <p class="time" id="time"></p>
+      <p class="time" id="time"><span class="hour" id="hour"></span> : <span class="minutes" id="minutes"></span></p>
+      <p class="tzShort" id="tzShort"></p>
     </section>
   </main>
   <script src="app.js"></script>
