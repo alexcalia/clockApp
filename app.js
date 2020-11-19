@@ -9,12 +9,23 @@ clockApp.time = document.getElementById('time');
 clockApp.tzShort = document.getElementById('tzShort');
 clockApp.hour = document.getElementById('hour');
 clockApp.minutes = document.getElementById('minutes');
+clockApp.greeting = document.getElementById('greeting');
 
 // Get current time and create interval to update time
 clockApp.currentTime = () => {
   const date = new Date();
   const hour = date.getHours();
   const minutes = date.getMinutes();
+  if (hour >= 12 && hour < 19) {
+    clockApp.greeting.innerHTML = "Afternoon";
+  } else if (hour >= 19) {
+    clockApp.greeting.innerHTML = "Evening";
+  } else if (hour >= 0 && hour < 4) {
+    clockApp.greeting.innerHTML = "Evening";
+  } else {
+    clockApp.greeting.innerHTML = "Morning";
+  }
+
   clockApp.hour.innerHTML = clockApp.updateTime(hour);
   clockApp.minutes.innerHTML = clockApp.updateTime(minutes);
   const t = setTimeout(() => clockApp.currentTime(), 60000);
@@ -41,7 +52,7 @@ clockApp.getQuote = async () => {
         .then(response => response.json())
         .then(data => {
           clockApp.quote.innerHTML = data.quote;
-          clockApp.author.innerHTML = `- ${data.author}`
+          clockApp.author.innerHTML = data.author
         });
 };
 
@@ -52,7 +63,6 @@ clockApp.getGeoData = async () => {
         .then(data => {
           clockApp.location.innerHTML = `${data.city}, ${data.country}`;
           clockApp.timezone.innerHTML = data.timezone;
-          console.log(data);
         })
 };
 

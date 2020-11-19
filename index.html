@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb0dedd964.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/styles.css">
@@ -11,21 +12,22 @@
 <body>
   <header>
     <section class="quoteContainer">
-      <button class="newQuote" id="newQuote" onClick="clockApp.getQuote()">New</button>
       <article>
         <p class="quote" id="quote"></p>
         <p class="author" id="author"></p>
       </article>
+      <button class="newQuote" id="newQuote" onClick="clockApp.getQuote()"><i class="fas fa-sync-alt"></i></button>
     </section>
   </header>
   <main>
-    <section class="geoData">
-      <p class="location" id ="location"></p>
-      <p class="timezone" id="timezone"></p>
-    </section>
     <section class="clockSection">
+      <p class="greeting"><i class="fas fa-sun"></i>Good <span id="greeting"></span>, it's currently</p>
       <p class="time" id="time"><span class="hour" id="hour"></span> : <span class="minutes" id="minutes"></span></p>
       <p class="tzShort" id="tzShort"></p>
+      <p class="location">In <span id="location"></span></p>
+    </section>
+    <section class="geoData">
+      <p class="timezone" id="timezone"></p>
     </section>
   </main>
   <script src="app.js"></script>
