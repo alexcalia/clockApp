@@ -213,7 +213,7 @@ textarea {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: black;
   color: white;
 }
@@ -233,8 +233,9 @@ body {
 }
 
 .time {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 200px;
+  font-family: 'Inter', sans-serif;
 }
 
 .tzShort {
