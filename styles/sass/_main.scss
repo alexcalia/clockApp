@@ -1,0 +1,28 @@
+// Time
+.tzShort,
+.time {
+  display: inline-block;
+}
+
+.time {
+  font-weight: 600;
+  font-size: 200px;
+}
+
+.tzShort {
+  font-size: 40px;
+}
+
+.greeting {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.location {
+  font-weight: 600;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

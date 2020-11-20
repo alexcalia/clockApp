@@ -10,6 +10,7 @@ clockApp.tzShort = document.getElementById('tzShort');
 clockApp.hour = document.getElementById('hour');
 clockApp.minutes = document.getElementById('minutes');
 clockApp.greeting = document.getElementById('greeting');
+clockApp.sunMoon = document.getElementById('sunMoon');
 
 // Get current time and create interval to update time
 clockApp.currentTime = () => {
@@ -20,10 +21,12 @@ clockApp.currentTime = () => {
     clockApp.greeting.innerHTML = "Afternoon";
   } else if (hour >= 19) {
     clockApp.greeting.innerHTML = "Evening";
+    clockApp.sunMoon.className = "fas fa-sun"
   } else if (hour >= 0 && hour < 4) {
     clockApp.greeting.innerHTML = "Evening";
   } else {
     clockApp.greeting.innerHTML = "Morning";
+    clockApp.sunMoon.className = "fas fa-moon"
   }
 
   clockApp.hour.innerHTML = clockApp.updateTime(hour);
@@ -51,7 +54,7 @@ clockApp.getQuote = async () => {
   await fetch(`http://quotes.stormconsultancy.co.uk/random.json`)
         .then(response => response.json())
         .then(data => {
-          clockApp.quote.innerHTML = data.quote;
+          clockApp.quote.innerHTML = `"${data.quote}"`;
           clockApp.author.innerHTML = data.author
         });
 };

@@ -10,26 +10,28 @@
   <title>Clock App</title>
 </head>
 <body>
-  <header>
-    <section class="quoteContainer">
-      <article>
-        <p class="quote" id="quote"></p>
-        <p class="author" id="author"></p>
-      </article>
-      <button class="newQuote" id="newQuote" onClick="clockApp.getQuote()"><i class="fas fa-sync-alt"></i></button>
-    </section>
-  </header>
-  <main>
-    <section class="clockSection">
-      <p class="greeting"><i class="fas fa-sun"></i>Good <span id="greeting"></span>, it's currently</p>
-      <p class="time" id="time"><span class="hour" id="hour"></span> : <span class="minutes" id="minutes"></span></p>
-      <p class="tzShort" id="tzShort"></p>
-      <p class="location">In <span id="location"></span></p>
-    </section>
-    <section class="geoData">
-      <p class="timezone" id="timezone"></p>
-    </section>
-  </main>
+  <div class="wrapper">
+    <header>
+      <section class="quoteContainer">
+        <article>
+          <p class="quote" id="quote"></p>
+          <p class="author" id="author"></p>
+        </article>
+        <button class="newQuote" id="newQuote" onClick="clockApp.getQuote()"><i class="fas fa-sync-alt"></i></button>
+      </section>
+    </header>
+    <main>
+      <section class="clockSection">
+        <p class="greeting"><i class="fas fa-sun" id="sunMoon"></i>Good <span id="greeting"></span>, it's currently</p>
+        <p class="time" id="time"><span class="hour" id="hour"></span>:<span class="minutes" id="minutes"></span></p>
+        <p class="tzShort" id="tzShort"></p>
+        <p class="location">In <span id="location"></span></p>
+      </section>
+      <section class="geoData" hidden>
+        <p class="timezone" id="timezone"></p>
+      </section>
+    </main>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
