@@ -219,7 +219,7 @@ body {
 }
 
 .wrapper {
-  width: 85%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -241,17 +241,18 @@ header {
 
 .quote {
   line-height: 1.5;
+  color: #c0c8ca;
 }
 
 .newQuote {
-  color: white;
+  color: #c0c8ca;
   background: none;
   display: inline-block;
   height: 30px;
   margin-left: 12px;
   border: none;
   padding: 0;
-  font-size: 18px;
+  font-size: 10px;
 }
 
 .author {
@@ -280,18 +281,34 @@ main {
 
 .tzShort {
   font-size: 40px;
+  color: #c0c8ca;
+  font-weight: 200;
+}
+
+.greetingContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+i {
+  font-size: 25px;
 }
 
 .greeting {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 16px;
-  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: #c0c8ca;
+  margin-left: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .location {
   font-weight: 600;
   font-size: 25px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
+  margin-top: 25px;
 }

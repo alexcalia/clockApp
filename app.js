@@ -21,12 +21,12 @@ clockApp.currentTime = () => {
     clockApp.greeting.innerHTML = "Afternoon";
   } else if (hour >= 19) {
     clockApp.greeting.innerHTML = "Evening";
-    clockApp.sunMoon.className = "fas fa-sun"
+    clockApp.sunMoon.className = "fas fa-moon"
   } else if (hour >= 0 && hour < 4) {
     clockApp.greeting.innerHTML = "Evening";
   } else {
     clockApp.greeting.innerHTML = "Morning";
-    clockApp.sunMoon.className = "fas fa-moon"
+    clockApp.sunMoon.className = "fas fa-sun"
   }
 
   clockApp.hour.innerHTML = clockApp.updateTime(hour);
