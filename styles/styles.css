@@ -214,8 +214,13 @@ textarea {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: black;
   color: white;
+  background-image: url("../assets/nightBackground.jpg");
+  background-size: cover;
+}
+
+.nightBackground {
+  background-image: url("../assets/nightBackground.jpg");
 }
 
 .wrapper {
@@ -249,10 +254,13 @@ header {
   background: none;
   display: inline-block;
   height: 30px;
-  margin-left: 12px;
+  margin-left: 10px;
   border: none;
   padding: 0;
-  font-size: 10px;
+}
+
+.newQuote i {
+  font-size: 16px;
 }
 
 .author {

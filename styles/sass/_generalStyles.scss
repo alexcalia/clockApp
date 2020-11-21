@@ -1,7 +1,12 @@
 body {
   font-family: 'Inter', sans-serif;
-  background: black;
   color: white;
+  background-image: url("../assets/nightBackground.jpg");
+  background-size: cover;
+}
+
+.nightBackground {
+  background-image: url("../assets/nightBackground.jpg");
 }
 
 .wrapper {
