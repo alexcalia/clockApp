@@ -223,6 +223,26 @@ body {
   margin: 0 auto;
 }
 
+.quoteContainer {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-top: 20px;
+}
+
+.newQuote {
+  color: white;
+  background: none;
+  display: inline-block;
+  height: 30px;
+  margin-left: 10px;
+  border: none;
+  padding: 0;
+  margin-top: -8px;
+}
+
 .author {
   font-weight: 600;
 }
