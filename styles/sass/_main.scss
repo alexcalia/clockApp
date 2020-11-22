@@ -4,6 +4,8 @@ main {
 
 .clockSection {
   padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
 }
 
 // Time
@@ -48,4 +50,31 @@ i {
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-top: 25px;
+}
+
+// More/Less Button
+.moreLess {
+  height: 50px;
+  align-self: flex-end;
+  background: white;
+  color: #8c8c8c;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+
+  .moreLessText {
+    letter-spacing: 5px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
+  i {
+    border-radius: 50%;
+    background-color: #323232;
+    color: white;
+    font-size: 20px;
+    padding: 8px;
+  }
 }

@@ -23,7 +23,7 @@ clockApp.currentTime = () => {
   } else if (hour >= 19) {
     clockApp.greeting.innerHTML = "Evening";
     clockApp.sunMoon.className = "fas fa-moon";
-    clockApp.body.style.backgroundImage = "url('../assets/nightBackground.jpg')";
+    clockApp.body.style.backgroundImage = "url('./assets/nightBackground.jpg')";
   } else if (hour >= 0 && hour < 4) {
     clockApp.greeting.innerHTML = "Evening";
   } else {
