@@ -343,13 +343,14 @@ i {
   letter-spacing: 5px;
   font-weight: 700;
   margin-left: 10px;
-  margin-right: 5px;
+  margin-right: 3px;
+  font-size: 14px;
 }
 
 .moreLess i {
   border-radius: 50%;
   background-color: #323232;
   color: white;
-  font-size: 20px;
-  padding: 8px;
+  font-size: 12px;
+  padding: 12px;
 }
