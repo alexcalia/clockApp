@@ -77,5 +77,11 @@ i {
     color: white;
     font-size: 12px;
     padding: 12px;
+    transition-duration: 0.3s
+  }
+
+  &:hover i {
+    transform: rotate(180deg);
+    transition-duration: 0.3s
   }
 }

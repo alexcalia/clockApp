@@ -353,4 +353,13 @@ i {
   color: white;
   font-size: 12px;
   padding: 12px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.moreLess:hover i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
