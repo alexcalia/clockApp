@@ -1,9 +1,13 @@
 body {
   font-family: 'Inter', sans-serif;
   color: white;
-  background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url('../assets/nightBackground.jpg');
-  background-size: cover;
+  // background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+  //   url('../assets/dayBackground.jpg');
+  background-size: 100% 100%;
+}
+
+.bodyBackground {
+  background-size: 100% 100%;
 }
 
 .nightBackground {
@@ -15,14 +19,3 @@ body {
   margin: 0 auto;
   z-index: 10;
 }
-
-// .darken {
-//   background: black;
-//   opacity: 0.2;
-//   position: absolute;
-//   z-index: 1;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-// }

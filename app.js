@@ -20,15 +20,26 @@ clockApp.currentTime = () => {
   const minutes = date.getMinutes();
   if (hour >= 12 && hour < 19) {
     clockApp.greeting.innerHTML = "Afternoon";
+    clockApp.body.style.background = `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url('./assets/dayBackground.jpg')`
+    clockApp.body.style.backgroundSize = "100% 100%"
   } else if (hour >= 19) {
     clockApp.greeting.innerHTML = "Evening";
     clockApp.sunMoon.className = "fas fa-moon";
-    clockApp.body.style.backgroundImage = "url('./assets/nightBackground.jpg')";
+    clockApp.body.style.background = `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url('./assets/nightBackground.jpg')`;
+    clockApp.body.style.backgroundSize = "100% 100%"
   } else if (hour >= 0 && hour < 4) {
     clockApp.greeting.innerHTML = "Evening";
+    clockApp.body.style.background = `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url('./assets/nightBackground.jpg')`
+    clockApp.body.style.backgroundSize = "100% 100%"
   } else {
     clockApp.greeting.innerHTML = "Morning";
     clockApp.sunMoon.className = "fas fa-sun";
+    clockApp.body.style.background = `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    url('./assets/dayBackground.jpg')`
+    clockApp.body.style.backgroundSize = "100% 100%"
   }
 
   clockApp.hour.innerHTML = clockApp.updateTime(hour);
