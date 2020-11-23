@@ -10,35 +10,34 @@
   <title>Clock App</title>
 </head>
 <body>
-  <div class="darken"> 
-    <div class="wrapper">
-      <header>
-        <section class="quoteContainer">
-          <article>
-            <p class="quote" id="quote"></p>
-            <p class="author" id="author"></p>
-          </article>
-          <button class="newQuote" id="newQuote" onClick="clockApp.getQuote()"><i class="fas fa-sync-alt"></i></button>
-        </section>
-      </header>
-      <main>
-        <section class="clockSection">
-          <div class="clockContainer">
-            <div class="greetingContainer">
-              <i class="fas fa-sun" id="sunMoon"></i>
-              <p class="greeting">Good <span id="greeting"></span>, it's currently</p>
-            </div>
-            <p class="time" id="time"><span class="hour" id="hour"></span>:<span class="minutes" id="minutes"></span></p>
-            <p class="tzShort" id="tzShort"></p>
-            <p class="location">In <span id="location"></span></p>
+  <div class="darken"></div>
+  <div class="wrapper">
+    <header>
+      <section class="quoteContainer">
+        <article>
+          <p class="quote" id="quote"></p>
+          <p class="author" id="author"></p>
+        </article>
+        <button class="newQuote" id="newQuote" onClick="clockApp.getQuote()"><i class="fas fa-sync-alt"></i></button>
+      </section>
+    </header>
+    <main>
+      <section class="clockSection">
+        <div class="clockContainer">
+          <div class="greetingContainer">
+            <i class="fas fa-sun" id="sunMoon"></i>
+            <p class="greeting">Good <span id="greeting"></span>, it's currently</p>
           </div>
-          <button class="moreLess" id="moreLess"><span class="moreLessText" id="moreLessText">More</span> <i class="fas fa-chevron-down"></i></button>
-        </section>
-        <section class="geoData" hidden>
-          <p class="timezone" id="timezone"></p>
-        </section>
-      </main>
-    </div>
+          <p class="time" id="time"><span class="hour" id="hour"></span>:<span class="minutes" id="minutes"></span></p>
+          <p class="tzShort" id="tzShort"></p>
+          <p class="location">In <span id="location"></span></p>
+        </div>
+        <button class="moreLess" id="moreLess"><span class="moreLessText" id="moreLessText">More</span> <i class="fas fa-chevron-down"></i></button>
+      </section>
+      <section class="geoData" hidden>
+        <p class="timezone" id="timezone"></p>
+      </section>
+    </main>
   </div>
   <script src="app.js"></script>
 </body>
