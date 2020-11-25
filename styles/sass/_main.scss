@@ -64,6 +64,8 @@ i {
   text-transform: uppercase;
   padding-left: 12px;
   padding-right: 10px;
+  transition-duration: 0.3s;
+  border: 2px solid transparent;
 
   .moreLessText {
     letter-spacing: 5px;
@@ -80,7 +82,12 @@ i {
     color: white;
     font-size: 15px;
     padding: 14px;
-    transition-duration: 0.3s
+    transition-duration: 0.3s;
+  }
+
+  &:hover {
+    color: #323232;
+    border: 2px solid black;
   }
 
   &:hover i {

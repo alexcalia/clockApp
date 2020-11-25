@@ -342,6 +342,9 @@ i {
   text-transform: uppercase;
   padding-left: 12px;
   padding-right: 10px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border: 2px solid transparent;
 }
 
 .moreLess .moreLessText {
@@ -361,6 +364,11 @@ i {
   padding: 14px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+
+.moreLess:hover {
+  color: #323232;
+  border: 2px solid black;
 }
 
 .moreLess:hover i {
