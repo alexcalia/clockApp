@@ -85,8 +85,8 @@ clockApp.getGeoData = async () => {
 };
 
 clockApp.moreLessButton = () => {
-  clockApp.header.style.height = "0vh";
-  clockApp.geoData.style.height = "50vh";
+  clockApp.header.style.display = "none";
+  clockApp.geoData.style.display= "block";
 }
 
 clockApp.eventListeners = () => {
