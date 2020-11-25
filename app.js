@@ -14,6 +14,7 @@ clockApp.greeting = document.getElementById('greeting');
 clockApp.sunMoon = document.getElementById('sunMoon');
 clockApp.body = document.querySelector('body');
 clockApp.geoData = document.getElementById('geoData');
+clockApp.toggleGeo = false;
 
 // Get current time and create interval to update time
 clockApp.currentTime = () => {
@@ -85,8 +86,15 @@ clockApp.getGeoData = async () => {
 };
 
 clockApp.moreLessButton = () => {
-  clockApp.header.style.display = "none";
-  clockApp.geoData.style.display= "block";
+  if (!clockApp.toggleGeo) {
+    clockApp.header.style.height = "0vh";
+    clockApp.geoData.style.height= "50vh";
+    clockApp.toggleGeo = true;
+  } else {
+    clockApp.header.style.height = "50vh";
+    clockApp.geoData.style.height= "0vh";
+    clockApp.toggleGeo = false;
+  }
 }
 
 clockApp.eventListeners = () => {
