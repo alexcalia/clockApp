@@ -1,6 +1,7 @@
 const clockApp = {}
 
 // Caching
+clockApp.header = document.querySelector('header');
 clockApp.quote = document.getElementById('quote');
 clockApp.author = document.getElementById('author');
 clockApp.location = document.getElementById('location');
@@ -12,6 +13,7 @@ clockApp.minutes = document.getElementById('minutes');
 clockApp.greeting = document.getElementById('greeting');
 clockApp.sunMoon = document.getElementById('sunMoon');
 clockApp.body = document.querySelector('body');
+clockApp.geoData = document.getElementById('geoData');
 
 // Get current time and create interval to update time
 clockApp.currentTime = () => {
@@ -81,6 +83,11 @@ clockApp.getGeoData = async () => {
           clockApp.timezone.innerHTML = data.timezone;
         })
 };
+
+clockApp.moreLessButton = () => {
+  clockApp.header.style.height = "0vh";
+  clockApp.geoData.style.height = "50vh";
+}
 
 clockApp.eventListeners = () => {
 
