@@ -93,13 +93,15 @@ clockApp.moreLessButton = () => {
     clockApp.geoData.style.height= "50vh";
     clockApp.toggleGeo = true;
     clockApp.moreLessText.innerHTML = "Less";
-    clockApp.chevron.toggleClass = "fa-chevron-down fa-chrevron-up"
+    clockApp.chevron.classList.remove("fa-chevron-down");
+    clockApp.chevron.classList.add("fa-chevron-up");
   } else {
     clockApp.header.style.height = "50vh";
     clockApp.geoData.style.height= "0vh";
     clockApp.toggleGeo = false;
     clockApp.moreLessText.innerHTML = "More";
-    clockApp.chevron.toggleClass = "fa-chevron-up fa-chrevron-down"
+    clockApp.chevron.classList.remove("fa-chevron-up");
+    clockApp.chevron.classList.add("fa-chevron-down");
   }
 }
 
