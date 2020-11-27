@@ -406,6 +406,9 @@ i {
   -webkit-transition-duration: 0.45s;
           transition-duration: 0.45s;
   padding: 90px 0;
+}
+
+.geoData .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,8 +420,17 @@ i {
   height: 100%;
 }
 
+.leftGeo section:last-child,
+.rightGeo section:last-child {
+  margin-top: 70px;
+}
+
 .leftGeo {
   border-right: 2px solid #82817f;
+}
+
+.rightGeo {
+  padding-left: 150px;
 }
 
 .geoData p {
