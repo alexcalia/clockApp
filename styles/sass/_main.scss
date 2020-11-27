@@ -103,6 +103,24 @@ i {
 .geoData {
   height: 50vh;
   transform: translateY(50vh);
-  background: rgba(140, 140, 140, 0.92);
+  background: rgba(197, 197, 197, 0.90);
   transition-duration: 0.45s;
+  padding: 90px 0;
+  display: flex;
+}
+
+.leftGeo,
+.rightGeo {
+  width: 50%;
+  height: 100%;
+}
+
+.leftGeo {
+  border-right: 2px solid #82817f;
+}
+
+.geoData p {
+  color: black;
+  font-size: 50px;
+  font-weight: 600;
 }
