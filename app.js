@@ -1,7 +1,7 @@
 const clockApp = {}
 
 // Caching
-clockApp.header = document.querySelector('header');
+clockApp.quoteContainer = document.getElementById('quoteContainer');
 clockApp.quote = document.getElementById('quote');
 clockApp.author = document.getElementById('author');
 clockApp.location = document.getElementById('location');
@@ -17,6 +17,7 @@ clockApp.geoData = document.getElementById('geoData');
 clockApp.toggleGeo = false;
 clockApp.moreLessText = document.getElementById('moreLessText');
 clockApp.chevron = document.getElementById('chevron');
+clockApp.clockSection = document.getElementById('clockSection');
 
 // Get current time and create interval to update time
 clockApp.currentTime = () => {
@@ -89,15 +90,17 @@ clockApp.getGeoData = async () => {
 
 clockApp.moreLessButton = () => {
   if (!clockApp.toggleGeo) {
-    clockApp.header.style.height = "0vh";
-    clockApp.geoData.style.height= "50vh";
+    clockApp.quoteContainer.classList.add("quoteContainerHide");
+    clockApp.geoData.style.transform= "translateY(0)";
+    clockApp.clockSection.style.transform = "translateY(-45vh)";
     clockApp.toggleGeo = true;
     clockApp.moreLessText.innerHTML = "Less";
     clockApp.chevron.classList.remove("fa-chevron-down");
     clockApp.chevron.classList.add("fa-chevron-up");
   } else {
-    clockApp.header.style.height = "50vh";
-    clockApp.geoData.style.height= "0vh";
+    clockApp.quoteContainer.classList.remove("quoteContainerHide");
+    clockApp.geoData.style.transform= "translateY(50vh)";
+    clockApp.clockSection.style.transform = "translateY(0)";
     clockApp.toggleGeo = false;
     clockApp.moreLessText.innerHTML = "More";
     clockApp.chevron.classList.remove("fa-chevron-up");

@@ -6,10 +6,12 @@ main {
   padding-top: 17px;
   display: flex;
   justify-content: space-between;
-}
-
-.clockSectionHide {
-  transform: translateY(-45vh);
+  transform: translateY(0);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transition-duration: 0.45s;
 }
 
 // Time
@@ -100,10 +102,10 @@ i {
 
 .geoData {
   height: 50vh;
-  // display: none;
   position: absolute;
   top: 50vh;
   left: 0;
   right: 0;
   transform: translateY(50vh);
+  display: none;
 }
