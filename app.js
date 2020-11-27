@@ -93,6 +93,7 @@ clockApp.moreLessButton = () => {
     clockApp.quoteContainer.classList.add("quoteContainerHide");
     clockApp.geoData.style.transform= "translateY(0)";
     clockApp.clockSection.style.transform = "translateY(-45vh)";
+    clockApp.geoData.style.transform= "translateY(0vh)";
     clockApp.toggleGeo = true;
     clockApp.moreLessText.innerHTML = "Less";
     clockApp.chevron.classList.remove("fa-chevron-down");
@@ -101,6 +102,7 @@ clockApp.moreLessButton = () => {
     clockApp.quoteContainer.classList.remove("quoteContainerHide");
     clockApp.geoData.style.transform= "translateY(50vh)";
     clockApp.clockSection.style.transform = "translateY(0)";
+    clockApp.geoData.style.transform= "translateY(50vh)";
     clockApp.toggleGeo = false;
     clockApp.moreLessText.innerHTML = "More";
     clockApp.chevron.classList.remove("fa-chevron-up");

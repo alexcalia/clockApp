@@ -215,7 +215,9 @@ textarea {
 body {
   font-family: 'Inter', sans-serif;
   color: white;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .bodyBackground {
@@ -390,11 +392,9 @@ i {
 
 .geoData {
   height: 50vh;
-  position: absolute;
-  top: 50vh;
-  left: 0;
-  right: 0;
   -webkit-transform: translateY(50vh);
           transform: translateY(50vh);
-  display: none;
+  background: #8c8c8c;
+  -webkit-transition-duration: 0.45s;
+          transition-duration: 0.45s;
 }

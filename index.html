@@ -20,24 +20,29 @@
         <button class="newQuote" id="newQuote" onClick="clockApp.getQuote()"><i class="fas fa-sync-alt"></i></button>
       </section>
     </header>
+  </div>
     <main>
-      <section class="clockSection" id="clockSection">
-        <div class="clockContainer">
-          <div class="greetingContainer">
-            <i class="fas fa-sun" id="sunMoon"></i>
-            <p class="greeting">Good <span id="greeting"></span>, it's currently</p>
+      <div class="wrapper">
+        <section class="clockSection" id="clockSection">
+          <div class="clockContainer">
+            <div class="greetingContainer">
+              <i class="fas fa-sun" id="sunMoon"></i>
+              <p class="greeting">Good <span id="greeting"></span>, it's currently</p>
+            </div>
+            <p class="time" id="time"><span class="hour" id="hour"></span>:<span class="minutes" id="minutes"></span></p>
+            <p class="tzShort" id="tzShort"></p>
+            <p class="location">In <span id="location"></span></p>
           </div>
-          <p class="time" id="time"><span class="hour" id="hour"></span>:<span class="minutes" id="minutes"></span></p>
-          <p class="tzShort" id="tzShort"></p>
-          <p class="location">In <span id="location"></span></p>
-        </div>
-        <button class="moreLess" id="moreLess" tabindex="0" onClick="clockApp.moreLessButton()">
-          <span class="moreLessText" id="moreLessText">More</span> 
-          <i class="fas fa-chevron-down" id="chevron"></i>
-        </button>
-      </section>
+          <button class="moreLess" id="moreLess" tabindex="0" onClick="clockApp.moreLessButton()">
+            <span class="moreLessText" id="moreLessText">More</span> 
+            <i class="fas fa-chevron-down" id="chevron"></i>
+          </button>
+        </section>
+      </div>
       <section class="geoData" id="geoData">
-        <p class="timezone" id="timezone">Test</p>
+        <div class="wrapper">
+          <p class="timezone" id="timezone">Test</p>
+        </div>
       </section>
     </main>
   </div>
