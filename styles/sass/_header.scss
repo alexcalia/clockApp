@@ -11,6 +11,10 @@ header {
   height: 50vh;
 }
 
+.quoteContainerHide {
+  display: none;
+}
+
 .quote {
   line-height: 1.5;
   color: $baseColor;

@@ -216,6 +216,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: white;
   background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .bodyBackground {
@@ -229,7 +230,7 @@ body {
 .wrapper {
   width: 80%;
   margin: 0 auto;
-  z-index: 10;
+  position: relative;
 }
 
 header {
@@ -245,6 +246,10 @@ header {
   position: relative;
   font-size: 20px;
   height: 50vh;
+}
+
+.quoteContainerHide {
+  display: none;
 }
 
 .quote {
@@ -283,6 +288,11 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.clockSectionHide {
+  -webkit-transform: translateY(-45vh);
+          transform: translateY(-45vh);
 }
 
 .tzShort,
@@ -377,5 +387,11 @@ i {
 }
 
 .geoData {
-  height: 0vh;
+  height: 50vh;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(50vh);
+          transform: translateY(50vh);
 }

@@ -8,6 +8,10 @@ main {
   justify-content: space-between;
 }
 
+.clockSectionHide {
+  transform: translateY(-45vh);
+}
+
 // Time
 .tzShort,
 .time {
@@ -65,7 +69,6 @@ i {
   padding-left: 12px;
   padding-right: 10px;
   transition-duration: 0.3s;
-  padding-top: 20px;
 
   .moreLessText {
     letter-spacing: 5px;
@@ -96,5 +99,11 @@ i {
 }
 
 .geoData {
-  height: 0;
+  height: 50vh;
+  // display: none;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  transform: translateY(50vh);
 }
