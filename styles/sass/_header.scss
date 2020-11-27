@@ -9,10 +9,8 @@ header {
   position: relative;
   font-size: 20px;
   height: 50vh;
-}
-
-.quoteContainerHide {
-  display: none;
+  transform: translateY(0);
+  transition-duration: 0.45s;
 }
 
 .quote {

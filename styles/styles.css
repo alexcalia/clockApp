@@ -247,10 +247,10 @@ header {
   position: relative;
   font-size: 20px;
   height: 50vh;
-}
-
-.quoteContainerHide {
-  display: none;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-duration: 0.45s;
+          transition-duration: 0.45s;
 }
 
 .quote {
