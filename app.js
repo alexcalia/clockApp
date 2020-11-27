@@ -29,6 +29,7 @@ clockApp.currentTime = () => {
     clockApp.body.style.background = `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     url('./assets/dayBackground.jpg')`;
     clockApp.body.style.backgroundSize = "100% 100%";
+    clockApp.geoData.style.background = "rgba(140, 140, 140, 0.92)";
   } else if (hour >= 19) {
     clockApp.greeting.innerHTML = "Evening";
     clockApp.sunMoon.className = "fas fa-moon";
@@ -46,6 +47,7 @@ clockApp.currentTime = () => {
     clockApp.body.style.background = `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     url('./assets/dayBackground.jpg')`;
     clockApp.body.style.backgroundSize = "100% 100%";
+    clockApp.geoData.style.background = "rgba(140, 140, 140, 0.92)";
   }
 
   clockApp.hour.innerHTML = clockApp.updateTime(hour);
