@@ -438,3 +438,33 @@ i {
   font-size: 50px;
   font-weight: 600;
 }
+
+@media (max-width: 1080px) {
+  .wrapper {
+    width: 87%;
+  }
+  .quoteContainer {
+    width: 70%;
+  }
+  .greeting {
+    font-size: 16px;
+  }
+  .location {
+    font-size: 20px;
+  }
+  .time {
+    font-size: 160px;
+  }
+  .tzShort {
+    font-size: 35px;
+  }
+  .geoData p {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 830px) {
+  .wrapper {
+    width: 90%;
+  }
+}
