@@ -445,6 +445,7 @@ i {
   }
   .quoteContainer {
     width: 70%;
+    font-size: 16px;
   }
   .greeting {
     font-size: 16px;
@@ -466,5 +467,11 @@ i {
 @media (max-width: 830px) {
   .wrapper {
     width: 90%;
+  }
+  .clockSection {
+    display: block;
+  }
+  .moreLess {
+    margin-top: 50px;
   }
 }
