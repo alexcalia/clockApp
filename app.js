@@ -115,6 +115,11 @@ clockApp.moreLessButton = () => {
 clockApp.eventListeners = () => {
   window.addEventListener('resize', () => {
     clockApp.appWidth = window.innerWidth;
+    if (clockApp.appWidth > 686 && clockApp.toggleGeo) {
+      clockApp.geoData.style.transform= "translateY(0)"
+    } else if (clockApp.appWidth < 686 && clockApp.toggleGeo) {
+      clockApp.geoData.style.transform= "translateY(10vh)"
+    }
   })
 };
 
