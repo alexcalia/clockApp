@@ -18,6 +18,7 @@ clockApp.toggleGeo = false;
 clockApp.moreLessText = document.getElementById('moreLessText');
 clockApp.chevron = document.getElementById('chevron');
 clockApp.clockSection = document.getElementById('clockSection');
+clockApp.appWidth = window.innerWidth;
 
 clockApp.setTimeStyles = (greeting, sunMoon, background, backgroundSize, geoBack) => {
     clockApp.greeting.innerHTML = greeting;
@@ -33,13 +34,13 @@ clockApp.currentTime = () => {
   const hour = date.getHours();
   const minutes = date.getMinutes();
   if (hour >= 12 && hour < 19) {
-    clockApp.setTimeStyles("Afternoon", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    clockApp.setTimeStyles("Afternoon", "fas fa-sun", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     url('./assets/dayBackground.jpg')`, "100% 100%", "rgba(197, 197, 197, 0.9)");
   } else if (hour >= 19) {
     clockApp.setTimeStyles("Evening", "fas fa-moon", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     url('./assets/nightBackground.jpg')`, "100% 100%");
   } else if (hour >= 0 && hour < 4) {
-    clockApp.setTimeStyles("Evening", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+    clockApp.setTimeStyles("Evening", "fas fa-moon", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     url('./assets/nightBackground.jpg')`, "100% 100%");
   } else {
     clockApp.setTimeStyles("Morning", "fas fa-sun", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
@@ -88,10 +89,13 @@ clockApp.getGeoData = async () => {
 
 clockApp.moreLessButton = () => {
   if (!clockApp.toggleGeo) {
+    if (clockApp.appWidth < 686) {
+      clockApp.geoData.style.transform= "translateY(10vh)";
+    } else if (clockApp.appWidth > 686) {
+      clockApp.geoData.style.transform= "translateY(0)";
+    }
     clockApp.quoteContainer.style.transform= "translateY(-45vh)"
-    clockApp.geoData.style.transform= "translateY(0)";
     clockApp.clockSection.style.transform = "translateY(-45vh)";
-    clockApp.geoData.style.transform= "translateY(0vh)";
     clockApp.toggleGeo = true;
     clockApp.moreLessText.innerHTML = "Less";
     clockApp.chevron.classList.remove("fa-chevron-down");
@@ -109,7 +113,9 @@ clockApp.moreLessButton = () => {
 }
 
 clockApp.eventListeners = () => {
-
+  window.addEventListener('resize', () => {
+    clockApp.appWidth = window.innerWidth;
+  })
 };
 
 clockApp.init = () => {

@@ -42,3 +42,11 @@
     margin-top: 50px;
   }
 }
+
+@media(max-width: 685px) {
+  .geoData {
+    height:  40vh;
+    padding-top: 60px;
+    transform: translateY(50vh);
+  }
+}
