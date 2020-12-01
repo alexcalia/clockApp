@@ -86,11 +86,11 @@ clockApp.getQuote = async () => {
 
 //Method to get geolocation data based on IP
 clockApp.getGeoData = async () => {
-  await fetch(`http://ip-api.com/json/`)
+  await fetch(`https://timezoneapi.io/api/ip/?token=aeCGNvWqkzxvoLSaPmFf`)
         .then(response => response.json())
         .then(data => {
-          clockApp.location.innerHTML = `${data.city}, ${data.country}`;
-          clockApp.timezone.innerHTML = data.timezone;
+          clockApp.location.innerHTML = `${data.data.city}, ${data.data.country}`;
+          clockApp.timezone.innerHTML = data.data.timezone.id;
         })
 };
 
