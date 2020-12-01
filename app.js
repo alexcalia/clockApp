@@ -19,6 +19,11 @@ clockApp.moreLessText = document.getElementById('moreLessText');
 clockApp.chevron = document.getElementById('chevron');
 clockApp.clockSection = document.getElementById('clockSection');
 clockApp.appWidth = window.innerWidth;
+clockApp.day = document.getElementById('day');
+clockApp.month = document.getElementById('month');
+clockApp.dayNumber = document.getElementById('dayNumber');
+clockApp.days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+clockApp.months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 clockApp.setTimeStyles = (greeting, sunMoon, background, backgroundSize, geoBack) => {
     clockApp.greeting.innerHTML = greeting;
@@ -46,7 +51,9 @@ clockApp.currentTime = () => {
     clockApp.setTimeStyles("Morning", "fas fa-sun", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
     url('./assets/dayBackground.jpg')`, "cover", "rgba(197, 197, 197, 0.9)")
   }
-
+  clockApp.day.innerHTML = clockApp.days[date.getDay()];
+  clockApp.month.innerHTML = clockApp.months[date.getMonth()];
+  clockApp.dayNumber.innerHTML = date.getDate();
   clockApp.hour.innerHTML = clockApp.updateTime(hour);
   clockApp.minutes.innerHTML = clockApp.updateTime(minutes);
   const t = setTimeout(() => clockApp.currentTime(), 60000);
