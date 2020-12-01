@@ -76,10 +76,11 @@ clockApp.getTzShort = () => {
 
 // Method to get random quote
 clockApp.getQuote = async () => {
-  await fetch(`http://quotes.stormconsultancy.co.uk/random.json`)
+  await fetch(`https://api.quotable.io/random`)
         .then(response => response.json())
         .then(data => {
-          clockApp.quote.innerHTML = `"${data.quote}"`;
+          console.log(data);
+          clockApp.quote.innerHTML = `"${data.content}"`;
           clockApp.author.innerHTML = data.author
         });
 };
