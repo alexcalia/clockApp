@@ -47,6 +47,13 @@
   .geoData {
     height:  40vh;
     padding-top: 60px;
-    transform: translateY(50vh);
+  }
+
+  .geoData p {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 14px;
   }
 }

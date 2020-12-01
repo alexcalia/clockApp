@@ -480,7 +480,11 @@ i {
   .geoData {
     height: 40vh;
     padding-top: 60px;
-    -webkit-transform: translateY(50vh);
-            transform: translateY(50vh);
+  }
+  .geoData p {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 14px;
   }
 }
