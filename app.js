@@ -35,16 +35,16 @@ clockApp.currentTime = () => {
   const minutes = date.getMinutes();
   if (hour >= 12 && hour < 19) {
     clockApp.setTimeStyles("Afternoon", "fas fa-sun", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url('./assets/dayBackground.jpg')`, "100% 100%", "rgba(197, 197, 197, 0.9)");
+    url('./assets/dayBackground.jpg')`, "cover", "rgba(197, 197, 197, 0.9)");
   } else if (hour >= 19) {
     clockApp.setTimeStyles("Evening", "fas fa-moon", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url('./assets/nightBackground.jpg')`, "100% 100%");
+    url('./assets/nightBackground.jpg')`, "cover");
   } else if (hour >= 0 && hour < 4) {
     clockApp.setTimeStyles("Evening", "fas fa-moon", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url('./assets/nightBackground.jpg')`, "100% 100%");
+    url('./assets/nightBackground.jpg')`, "cover");
   } else {
     clockApp.setTimeStyles("Morning", "fas fa-sun", `linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url('./assets/dayBackground.jpg')`, "100% 100%", "rgba(197, 197, 197, 0.9)")
+    url('./assets/dayBackground.jpg')`, "cover", "rgba(197, 197, 197, 0.9)")
   }
 
   clockApp.hour.innerHTML = clockApp.updateTime(hour);
