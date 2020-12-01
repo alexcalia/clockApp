@@ -57,3 +57,35 @@
     font-size: 14px;
   }
 }
+
+@media(max-width: 580px) {
+  .quoteContainer {
+    width: 90%;
+  }
+
+  .time {
+    font-size: 130px;
+  }
+
+  .tzShort {
+    font-size: 25px;
+  }
+
+  .location {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 480px) {
+  .wrapper {
+    width: 95%;
+  }
+  .quoteContainer {
+    width: 100%;
+  }
+
+  .quoteContainer,
+  .clockSection {
+    text-align: center;
+  }
+}
