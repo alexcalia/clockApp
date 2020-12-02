@@ -88,4 +88,19 @@
   .clockSection {
     text-align: center;
   }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .geoData p {
+    font-size: 20px;
+  }
+
+  .leftGeo,
+  .rightGeo {
+    section:last-child {
+      margin-top: 30px;
+    }
+  }
 }
